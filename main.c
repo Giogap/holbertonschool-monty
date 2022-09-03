@@ -46,6 +46,7 @@ int main(int argc, char **argv)
 			exit(EXIT_FAILURE);
 		}
 	}
+	free_pila(&head);
 	fclose(file);
 	return (EXIT_SUCCESS);
 }

@@ -49,4 +49,7 @@ void initfonc(instruction_t *structfonc);
 void push(stack_t **pila, unsigned int line_number);
 void pall(stack_t **pila, unsigned int line_number);
 
+/* free stakc */
+void free_pila(stack_t **pila);
+
 #endif /* MONTY_H */
