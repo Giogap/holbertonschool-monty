@@ -10,12 +10,6 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
-#define STACK_LENGTH 5
-#define EMPTY (-1)
-
-int mystack[STACK_LENGTH];
-int top = EMPTY;
-
 /**
  *
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -34,6 +28,10 @@ typedef struct stack_s
 	struct stack_s *next;
 } stack_t;
 
+
+
+
+
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
@@ -51,12 +49,15 @@ typedef struct instruction_s
 /* Function read, parse, execute */
 
 /*Functions Monty*/
-void pall(stack_t **stack, unsigned int line_number);
 void push(stack_t **stack, unsigned int line_number);
-void pint(stack_t **stack, unsigned int line_number);
+void pall(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
-void nop(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
+void nop(stack_t **stack, unsigned int line_number);
+void pint(stack_t **stack, unsigned int line_number);
+
+
+
 
 #endif /* MONTY_H */
