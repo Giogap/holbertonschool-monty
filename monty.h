@@ -42,6 +42,9 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/* Function inicialization array */
+void initfonc(instruction_t *structfonc);
+
 /*Functions Monty*/
 void push(stack_t **pila, unsigned int line_number);
 void pall(stack_t **pila, unsigned int line_number);

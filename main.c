@@ -1,30 +1,16 @@
 #include "monty.h"
 
 /**
- * initfonc - check code
- * @structfonc: array to initialise
- */
-
-void initfonc(instruction_t *structfonc)
-{
-	structfonc[0].opcode = "push";
-	structfonc[0].f = push;
-	structfonc[1].opcode = "pall";
-	structfonc[1].f = pall;
-
-}
-
-/**
-* main - executes monty file
-*@ac: should be 2
-*@av: contatins file name
-*Return: failure or success
+* main - check code
+*@argc: value
+*@argv: value
+*Return: always 0
 */
 
 int main(int argc, char **argv)
 {
 	FILE *file;
-	char *word;
+	char *date;
 	char line[256];
 	unsigned int linenum = 0, j;
 	instruction_t structfonc[10];
@@ -45,18 +31,18 @@ int main(int argc, char **argv)
 	while (fgets(line, sizeof(line), file) != NULL)
 	{
 		linenum++;
-		word = strtok(line, " \n");
+		date = strtok(line, " \n");
 		for (j = 0; j < 7; j++)
 		{
-			if (word && strcmp(word, structfonc[j].opcode) == 0)
+			if (date && strcmp(date, structfonc[j].opcode) == 0)
 			{
 				structfonc[j].f(&head, linenum);
 				break;
 			}
 		}
-		if (word && j >= 7)
+		if (date && j >= 7)
 		{
-			fprintf(stderr, "L%d: unknown instruction %s\n", linenum, word);
+			fprintf(stderr, "L%d: unknown instruction %s\n", linenum, date);
 			exit(EXIT_FAILURE);
 		}
 	}
