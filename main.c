@@ -1,31 +1,17 @@
 #include "monty.h"
 
 /**
- * freeStack - frees a stack
- * @stack: stack to free
- * Return: void
- */
-void freeStack(stack_t **stack)
-{
-	stack_t *tmp;
-
-	while (*stack != NULL)
-	{
-		tmp = *stack;
-		*stack = (*stack)->next;
-		free(tmp);
-	}
-}
-
-/**
- * initfonc - initialises the function/command array
+ * initfonc - check code
  * @structfonc: array to initialise
- * Return: void
  */
+
 void initfonc(instruction_t *structfonc)
 {
 	structfonc[0].opcode = "push";
 	structfonc[0].f = push;
+	structfonc[1].opcode = "pall";
+	structfonc[1].f = pall;
+
 }
 
 /**
@@ -34,7 +20,6 @@ void initfonc(instruction_t *structfonc)
 *@av: contatins file name
 *Return: failure or success
 */
-
 
 int main(int argc, char **argv)
 {
@@ -75,7 +60,6 @@ int main(int argc, char **argv)
 			exit(EXIT_FAILURE);
 		}
 	}
-	freeStack(&head);
 	fclose(file);
 	return (EXIT_SUCCESS);
 }
