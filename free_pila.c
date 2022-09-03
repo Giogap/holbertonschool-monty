@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * free_pila
+ * free_pila - check code
  * @pila: apuntador al siguiento nodo de la lista
  */
 

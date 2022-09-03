@@ -29,7 +29,7 @@ void push(stack_t **pila, unsigned int line_number)
 
 	temp = *pila;
 	date = strtok(NULL, "\n");
-	if(!date)
+	if (!date)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
