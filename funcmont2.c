@@ -3,9 +3,9 @@
 /**
  * pop - check code
  *
- * @line_number: line in file "filename"
- * @stack: the stack to change
- * Return: void
+ * @numlin: line in file "filename"
+ * @pila: the stack to change
+ *
  */
 void pop(stack_t **pila, unsigned int numlin)
 {
@@ -28,9 +28,9 @@ void pop(stack_t **pila, unsigned int numlin)
 /**
  * swap - check code
  *
- * @line_number: line in file "filename"
- * @stack: the stack to change
- * Return: void
+ * @numlin: line in file "filename"
+ * @pila: the stack to change
+ *
  */
 void swap(stack_t **pila, unsigned int numlin)
 {
@@ -48,11 +48,11 @@ void swap(stack_t **pila, unsigned int numlin)
 
 
 /**
- * add - add the top 2 elements of stack
+ * add - check code
  *
- * @line_number: line in file "filename"
- * @stack: the stack to change
- * Return: void
+ * @numlin: line in file "filename"
+ * @pila: the stack to change
+ *
  */
 void add(stack_t **pila, unsigned int numlin)
 {
@@ -69,9 +69,9 @@ void add(stack_t **pila, unsigned int numlin)
 /**
  * nop - does nothing
  *
- * @line_number: line in file "filename"
- * @stack: the stack to change
- * Return: void
+ * @numlin: line in file "filename"
+ * @pila: the stack to change
+ *
  */
 void nop(stack_t **pila, unsigned int numlin)
 {
