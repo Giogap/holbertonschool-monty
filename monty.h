@@ -49,6 +49,10 @@ void initfonc(instruction_t *structfonc);
 void push(stack_t **pila, unsigned int line_number);
 void pall(stack_t **pila, unsigned int line_number);
 void pint(stack_t **pila, unsigned int munlin);
+void pop(stack_t **pila, unsigned int numlin);
+void swap(stack_t **pila, unsigned int numlin);
+void add(stack_t **pila, unsigned int numlin);
+void nop(stack_t **pila, unsigned int numlin);
 
 /* free stakc */
 void free_pila(stack_t **pila);
