@@ -11,6 +11,17 @@ void initfonc(instruction_t *structfonc)
 	structfonc[0].f = push;
 	structfonc[1].opcode = "pall";
 	structfonc[1].f = pall;
+	structfonc[2].opcode = "pint";
+	structfonc[2].f = pint;
+	structfonc[3].opcode = "pop";
+	structfonc[3].f = pop;
+	structfonc[4].opcode = "add";
+	structfonc[4].f = add;
+	structfonc[5].opcode = "nop";
+	structfonc[5].f = nop;
+	structfonc[6].opcode = "swap";
+	structfonc[6].f = swap;
+
 }
 
 /**
@@ -72,4 +83,21 @@ void pall(stack_t **pila, unsigned int line_number)
 	}
 	if (0)
 		printf("%d", line_number);
+}
+
+/**
+ * pint - check code
+ *
+ * @numlin: line
+ * @pila: the pila change
+ *
+ */
+void pint(stack_t **pila, unsigned int numlin)
+{
+	if (!(*pila))
+	{
+		fprintf(stderr, "L%d: can't pint, stack empty\n", numlin);
+		exit(EXIT_FAILURE);
+	}
+	printf("%d\n", (*pila)->n);
 }
