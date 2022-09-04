@@ -32,14 +32,14 @@ void initfonc(instruction_t *structfonc)
 
 void push(stack_t **pila, unsigned int line_number)
 {
-	stack_t *newNode;
-	int n;
+	stack_t *newNode; /* crea un nuevo nodo */
 	stack_t *temp;
+	int n;
 	char *date;
 	char *ptr;
 
 	temp = *pila;
-	date = strtok(NULL, "\n");
+	date = strtok(NULL, " \n");
 	if (!date)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
@@ -51,20 +51,15 @@ void push(stack_t **pila, unsigned int line_number)
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-
-	/* crear el nuevo nodo */
-	newNode = malloc(sizeof(stack_t));
-
-	/* añadimos la pila a continuaciòn al nuevo nodo */
-	newNode->n = n;
+	newNode = malloc(sizeof(stack_t)); /* create new node */
+	newNode->n = n; /* add pila to new node */
 	newNode->next = temp;
 	newNode->prev = NULL;
 	if (temp)
 		temp->prev = newNode;
-
-	/* ahora el comienzo de nuestra pila es un nuevo nodo */
-	*pila = newNode;
+	*pila = newNode; /* start pila in new node */
 }
+
 
 /**
  * pall - check code
@@ -92,6 +87,7 @@ void pall(stack_t **pila, unsigned int line_number)
  * @pila: the pila change
  *
  */
+
 void pint(stack_t **pila, unsigned int numlin)
 {
 	if (!(*pila))
