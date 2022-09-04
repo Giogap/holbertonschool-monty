@@ -41,7 +41,7 @@ void swap(stack_t **pila, unsigned int numlin)
 		fprintf(stderr, "L%d: can't swap, stack too short\n", numlin);
 		exit(EXIT_FAILURE);
 	}
-	n = (*stack)->n;
+	n = (*pila)->n;
 	(*pila)->n = (*pila)->next->n;
 	(*pila)->next->n = n;
 }
