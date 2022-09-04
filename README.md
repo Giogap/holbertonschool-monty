@@ -6,7 +6,7 @@ A stack in C is nothing but a linear data structure that follows the LIFO rule
 (Last In First Out). In a stack, both insertion and deletion take place from
 just one end, that is, from the top.
 
-# 0.push, pall**
+# 0.push, pall
 
 **The push opcode**
 
@@ -42,5 +42,5 @@ julien@ubuntu:~/monty$
 
 Example
 
- [![asciicast](https://asciinema.org/a/tXSM9lQ84DxUuvK3llJRsplfb.sgv)](https://asciinema.org/a/tXSM9lQ84DxUuvK3llJRsplfb.sgv)
+ [![asciicast](https://asciinema.org/a/tXSM9lQ84DxUuvK3llJRsplfb.sgv)](https://asciinema.org/a/tXSM9lQ84DxUuvK3llJRsplfb)
 
